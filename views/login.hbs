@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+form{
+display: flex;
+flex-direction: column;
+width: 300px;
+justify-content: space-evenly;
+margin: auto;
+}
+h2{
+text-align: center;
+}
+</style>
+<script type="application/javascript">
+function validate() {
+{{!-- var data = new FormData(); --}}
+const data = new URLSearchParams();
+data.append('name', document.getElementById("name").value);
+data.append("password", document.getElementById("password").value);
+var params = { name: document.getElementById("name").value, password: document.getElementById("password").value };
+var request = new XMLHttpRequest();
+request.open("POST", "/api/login");
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+request.onload = function () {
+var result = JSON.parse(request.response);
+if (result.status === "y") {
+window.location.href = "/index";
+} else {
+alert(result.meg);
+}
+};
+{{!-- request.send(JSON.stringify(params)); --}}
+request.send(data.toString());
+}
+
+</script>
+<h2>Login</h2>
+<form action="index.hbs" method="POST">
+<label for="">User Name:</label>>
+<li class="list-group-item"><input class="form-control" type="text" name="name" id="name" placeholder="enter account" /></li>
+<li class="list-group-item"><input class="form-control" type="text" name="password" id="password" placeholder="enter password" /></li>
+<li class="list-group-item"><button type="button" class="btn btn-block btn-danger" onclick="validate()" id="btnLogin">login</button></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

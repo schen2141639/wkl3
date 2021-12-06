@@ -1,0 +1,43 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bank.css" />
+    <title>Deposit Form</title>
+  </head>
+
+  <body>
+    <!--	placeholder for content from the header.hbs file in the /views/partials directory 
+		the { { > xxx } } syntax means embed the content of file by the name of xxx.hbs			-->
+    <a href="/index">Return to Bank Menu</a>
+    <h2>Deposit Form</h2>
+    <section class="blockForm">
+      <form method="POST" action="/deposit">
+        <div>
+          <label>Account Number: {{data.accountNumber}}</label>
+        </div>
+        <div>
+          <label>Account Type: {{data.accountType}}</label>
+        </div>
+        <div>
+          <label>Balance: {{data.accountBalance}}</label>
+        </div>
+        <div>
+          <label for="depositAmount">Deposit Amount: </label>
+          <input type="text" id="depositAmount" name="depositAmount" />
+        </div>
+        <input type="hidden" name="accountType" value={{data.accountType}} />
+        <input
+          type="hidden"
+          name="accountBalance"
+          value={{data.accountBalance}}
+        /><br />
+        <button>Submit</button>
+      </form>
+    </section>
+
+  </body>
+
+</html>

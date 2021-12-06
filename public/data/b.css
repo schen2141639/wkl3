@@ -1,0 +1,84 @@
+#loggedUser {
+    
+    font-size: 1em;
+    float: right;
+    color: blue; 
+    margin:auto; 
+    
+}
+
+
+h1{
+    /* float: none; */
+    display: block;
+    font-size: 3em;
+    text-align: center;
+    color: darkred;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+.blockForm {
+    margin:auto;
+    font-size: 1.6em;
+    width: 35%;
+    color: red;
+    background-color: rgb(220, 245, 228);
+    border: 1px solid;
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+label {
+   
+    display: inline-block;
+    font-size: 1em;
+    width: 50%;
+    margin: 0;
+}
+
+input[type=text], input[type=password], select   {
+    
+    width: 75%;
+    color:darkred;
+    font-size: 1em;
+    
+}
+
+
+#logName:hover {
+    color: rgb(38, 0, 255); 
+}  
+
+
+button, input[type=submit] {
+    
+
+        display: block;
+        background-color: rgb(60, 0, 139);
+        border: none;
+        color: white;
+        padding: 12px 24px;
+        text-align: center;
+        font-size: 0.5em;
+        margin: 3px 1.5px;
+        opacity: 0.8;
+        width: 40%;
+     
+      }
+
+
+button:disabled, input[type=submit]:disabled  {
+    background-color: darkred;
+        border: none;
+        color: white;
+        padding: 12px 24px;
+        text-align: center;
+        font-size: 0.5em;
+        margin: 3px 1.5px;
+        opacity: 0.3;
+        width: 40%;
+     
+}

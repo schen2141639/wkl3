@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance</title>
+    <link rel="stylesheet" href="/css/bank.css" />
+  </head>
+
+  <body>
+    <!--	placeholder for content from the header.hbs file in the /views/partials directory 
+		the { { > xxx } } syntax means embed the content of file by the name of xxx.hbs			-->
+    <a href="/index">Return to Bank Menu</a>
+    <h2>Account Balance</h2>
+    <section class="blockForm">
+      <form method="POST" action="/">
+        <label id="accountNumber">Account Number:
+          {{data.accountNumber}}
+        </label><br />
+        <label id="accountType">Account Type: {{data.accountType}} </label><br
+        />
+        <label id="accountBalance">Account Balance:
+          {{data.accountBalance}}</label><br />
+        </form>
+      </form>
+    </section>
+  </body>
+</html>

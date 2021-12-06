@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bank.css" />
+    <title>Withdrawal Form</title>
+  </head>
+  <body>
+    <a href="/index">Return to Bank Menu</a>
+    <h2>Withdrawal Form</h2>
+    <p>{{message}}</p>
+    <article id="login-box">
+      <form method="POST" action="/withdraw">
+        <label>Account Number: {{data.accountNumber}}</label>
+        <label>Account Type: {{data.accountType}}</label>
+        <label>Balance: {{data.accountBalance}}</label>
+        <input
+          type="text"
+          name="withdrawAmount"
+          placeholder="Withdrawal amount"
+        />
+        <input type="hidden" name="accountType" value={{data.accountType}} />
+        <input
+          type="hidden"
+          name="accountBalance"
+          value={{data.accountBalance}}
+        /><br />
+        <button>Submit</button>
+      </form>
+    </article>
+  </body>
+</html>

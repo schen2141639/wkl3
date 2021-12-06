@@ -1,0 +1,35 @@
+{
+    "1000001": {
+        "accountType": "Chequing",
+        "accountBalance": 123
+    },
+    "1000002": {
+        "accountType": "Savings",
+        "accountBalance": 222
+    },
+    "1000011": {
+        "accountType": "Chequing",
+        "accountBalance": 222
+    },
+    "1000022": {
+        "accountType": "Savings",
+        "accountBalance": 333
+    },
+    "1000031": {
+        "accountType": "Chequing",
+        "accountBalance": 333
+    },
+    "1000032": {
+        "accountType": "Savings",
+        "accountBalance":4444
+    },
+    "1000051": {
+        "accountType": "Chequing",
+        "accountBalance": 13.699999999999989
+    },
+    "1000052": {
+        "accountType": "Savings",
+        "accountBalance": 44444
+    },
+    "lastID": "1000062"
+}

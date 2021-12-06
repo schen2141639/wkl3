@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<link rel='stylesheet' type='text/css' href='/data/b.css' />
+<title>Bank Page</title>
+</head>
+
+<body>
+    <nav>
+        <section id="loggedUser">
+            <form method="POST" action="/logout">
+                <label id="logName">{{username}}</label>
+                <button id="logOut">Log Out</label>
+            </form>
+        </section>
+    </nav>
+    
+    <header>
+        <h1> thisone   Bank</h1>
+    </header>
+    
+    <main>
+        <section class="blockForm">
+            <p>User: {{account.username}}</p>
+            <form method="POST" action="/bankForm">
+                <label for="accountsList">Accounts</label>
+                <select id="accountsList" name="accountsList">
+                    {{#if account.chequing}}
+                        <option value="{{account.chequing}}-Chequing">
+                            {{account.chequing}} - Chequing
+                        </option>
+                    {{/if}}
+                    {{#if account.saving}} 
+                        <option value="{{account.saving}}-Saving">
+                            {{account.saving}} - Saving
+                        </option>
+                    {{/if}}                                        
+                </select>
+                <label for="balance">Balance</label>
+                <input type="radio" id="balance" name="select" value="balance" onclick="checkSubmit()">
+
+                <label for="deposit">Deposit</label>
+                <input type="radio" id="deposit" name="select" value="deposit" onclick="checkSubmit()">
+
+                <label for="openAccount">Open an Account</label>
+                <input type="radio" id="openAccount" name="select" value="openAccount" onclick="checkSubmit()">
+
+                <label for="withdrawal">Withdrawal</label>
+                <input type="radio" id="withdrawal" name="select" value="withdrawal" onclick="checkSubmit()">
+
+                <input type="submit" value="OK" id="btSubmit" disabled> 
+            </form>
+        </section>
+    </main>
+    
+    <script>
+        function checkSubmit() {
+        var bt = document.getElementById('btSubmit');
+        bt.disabled = true;
+        if (
+        (document.getElementById("balance").checked) ||
+        (document.getElementById("deposit").checked) ||
+        (document.getElementById("openAccount").checked) ||
+        (document.getElementById("withdrawal").checked)
+        ) {
+        bt.disabled = false;
+        }
+
+        else {
+        bt.disabled = true;
+        }
+
+        }
+    </script>
+
+</body>
+
+</html>
