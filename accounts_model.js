@@ -1,8 +1,9 @@
 // Import the MongoClient
 const { MongoClient } = require("mongodb");
 
-const url = "mongodb+srv://dbadmin:dbadmin@cluster0.k6rv9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
+const url =
+  "mongodb+srv://dbadmin:dbadmin@cluster0.k6rv9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+//const url = "mongodb://localhost:27017";
 
 const getAccountList = async () => {
   // Connect to the MongoDB server.
@@ -133,4 +134,3 @@ module.exports = {
   createAccount,
   updateAccount,
 };
-
